@@ -32,7 +32,7 @@ directive('flag', function() {
                 if (value) {
                     $unwatchS();
                 }
-                elm.setClass('f' + scope.size);
+                elm.addClass('f' + scope.size);
             });
         }
     };
