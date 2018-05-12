@@ -20,8 +20,15 @@ directive('flag', function() {
                 scope.size = 16;
             }
 
+            function lowercase(value) {
+                if (!value) {
+                    return '';
+                }
+                return value.toString().toLowerCase();
+            }
+            
             var $unwatchC = scope.$watch('country', function(value) {
-                scope.country = angular.lowercase(value);
+                scope.country = lowercase(value);
                 if (value) {
                     $unwatchC();
                 }
